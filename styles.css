@@ -27,7 +27,7 @@ header {
   padding: 16px;
   width: 97%;
   margin-left: 20px;
-  height: 10vh;
+  height: 8vh;
   background: linear-gradient(to right, lightgray , gray , darkgray );
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   border-radius: 100px;
@@ -42,14 +42,14 @@ header .logo {
 
 header .logo img {
   height: 100%;
-  width: 100px;
+  width: 200px;
 }
 
 header .logo a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 40px;
   
 }
 
@@ -144,7 +144,7 @@ section:nth-child(odd) {
 
 .singkatan {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 25px;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
