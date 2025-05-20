@@ -1,0 +1,450 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  
+}
+
+
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+
+
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  width: 97%;
+  margin-left: 20px;
+  height: 10vh;
+  background: linear-gradient(to right, lightgray , gray , darkgray );
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+  
+}
+
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .logo img {
+  height: 100%;
+  width: 100px;
+}
+
+header .logo a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+  
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 25px;
+  transition: 0.3s linear;
+  margin: 0 20px 0;
+}
+
+header nav a::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #fff;
+  width: 0%;
+  transition: 0.3s linear;
+}
+
+header nav a:hover::after {
+  width: 100%;
+  transition: 0.3s linear;
+}
+
+header .extra-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+header .extra-nav button {
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 12px;
+  transition: 0.3s linear;
+}
+
+header .extra-nav button:nth-child(1) {
+  background: #fff;
+  color: #000;
+}
+
+header .extra-nav button:hover {
+  background: #fff;
+  color: #000;
+  transition: 0.3s linear;
+}
+
+header .hamburger-menu {
+  cursor: pointer;
+  display: none;
+}
+
+header .mobile-nav {
+  display: none;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+section:nth-child(odd) {
+  background-color: gray;
+  
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.singkatan {
+  margin-top: 20px;
+  font-size: 18px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: normal;
+}
+
+
+.anggota{
+  padding: 0 40px;
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap */
+  justify-content: center; /* Center the cards */
+  gap: 20px; /* Add spacing between cards */
+  align-items: center;
+}
+
+.card {
+  display: flex; /* Set card as a flex container */
+  flex-direction: column; /* Stack the elements vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: space-between; /* Distribute space evenly */
+  height: 280px;
+  max-width: 350px;
+  border-radius: 25px;
+  margin: 0 20px;
+  background: white;
+  transition: 0.4s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover{
+  height: 480px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .img {
+  height: 200px;
+  width: 100%;
+  display: flex;
+
+}
+
+.card .img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.card .top-text {
+  padding: 5px;
+  text-align: center;
+}
+
+.card .top-text .name {
+  font-size: 25px;
+  font-weight: 600;
+  color: black;
+
+}
+
+.card .top-text p {
+  font-size: 20px;
+  font-weight: 600;
+  color: purple;
+  line-height: 20px;
+}
+
+.card .bottom-text {
+  padding: 0 20px 10px 20px;
+  margin-top: 5px;
+  background: white;
+  opacity: 0;
+  border-radius: 25px;
+  visibility: hidden;
+  transition: 0.1s;
+  text-align: center;
+}
+
+.card:hover .bottom-text {
+  opacity: 1;
+  visibility: visible;
+  
+}
+
+.card .bottom-text .text {
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+
+.card .bottom-text .btn {
+  margin: 10px 0;
+  
+}
+
+.card .bottom-text .btn a {
+  text-decoration: none;
+  background: purple;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 3px;
+  display: inline-flex;
+  transition: 0.2;
+  border-radius: 25px;
+}
+
+.card .bottom-text .btn a:hover {
+  transform: scale(0.9);
+
+}
+
+.home {
+  height: 100vh;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  padding: 20 10% 0;
+}
+
+.home-content{
+  max-width: 700px;
+  text-align: left; /* Ensures text alignment to the left */
+  margin: 0; /* Remove any centering margin */
+}
+
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+.home-content h3{
+  font-size: 32px;
+  font-weight: 700;
+  color: #00abf0;
+}
+
+.home-content p{
+  font-size: 16px;
+  margin: 20px 0 40px;
+}
+
+.home-content .img {
+  max-width: 10px;
+}
+
+svg{
+  width: 100%;
+  height: 100%;
+  font-family: raleway;
+  
+}
+
+svg text {
+  text-transform: uppercase;
+  font-size: 5rem;
+  animation: stroke 5s infinite alternate;
+  font-size: 200px;
+  align-items: center;
+}
+
+@keyframes stroke {
+  0% {
+      stroke: greenyellow;
+      stroke-width: 0;
+      stroke-dashoffset: 25%;
+      stroke-dasharray: 0 50%;
+  }
+  70% {
+      stroke: greenyellow;
+  }
+  80% {
+      stroke: greenyellow;
+      stroke-width: 3;
+  }
+  100% {
+      stroke: greenyellow;
+      stroke-width: 0;
+      stroke-dashoffset: -25%;
+      stroke-dasharray:50% 0;
+  }
+}
+
+@media screen and (max-width: 978px) {
+  .anggota{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .card {
+    max-width: 700px;
+    margin: 20px 0;
+  }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  body{
+    margin: 0;
+  }
+  
+  header nav,
+  header .extra-nav {
+    display: none;
+  }
+
+  header .hamburger-menu {
+    display: block;
+  }
+
+  header .mobile-nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    height: 100vh;
+    background-color: #000;
+    z-index: 999;
+    transition: all 0.2s linear;
+    
+    
+  }
+
+  header .mobile-nav.show {
+    transform: translateY(0);
+    transition: all 0.2s linear;
+  }
+
+  header .mobile-nav .close {
+    position: absolute;
+    top: 24px;
+    right: 16px;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+  }
+
+  header .mobile-nav .close svg {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+  }
+
+  header .mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  header .mobile-nav ul li {
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+    width: 25%;
+  }
+
+  header .mobile-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 36px;
+    transition: 0.3s linear;
+  }
+
+  header .mobile-nav ul li .nav-link::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #fff;
+    width: 0%;
+    transition: 0.3s linear;
+  }
+
+  header .mobile-nav ul li:hover .nav-link::after {
+    width: 100%;
+    transition: 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header .mobile-nav ul li {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header .mobile-nav ul li {
+    width: 50%;
+  }
+  header{
+    width: 87%;
+    align-items: center;
+    
+  }
+}
