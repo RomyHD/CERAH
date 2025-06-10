@@ -155,17 +155,17 @@ section:nth-child(odd) {
 .anggota{
   padding: 0 40px;
   display: flex;
-  flex-wrap: wrap; /* Allow cards to wrap */
-  justify-content: center; /* Center the cards */
-  gap: 20px; /* Add spacing between cards */
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 20px; 
   align-items: center;
 }
 
 .card {
-  display: flex; /* Set card as a flex container */
-  flex-direction: column; /* Stack the elements vertically */
-  align-items: center; /* Center items horizontally */
-  justify-content: space-between; /* Distribute space evenly */
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: space-between; 
   height: 280px;
   max-width: 350px;
   border-radius: 25px;

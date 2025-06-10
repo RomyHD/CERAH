@@ -6,7 +6,10 @@
 
 html {
   scroll-behavior: smooth;
+  
 }
+
+
 
 body {
   background-color: #000;
@@ -24,7 +27,7 @@ header {
   padding: 16px;
   width: 97%;
   margin-left: 20px;
-  height: 10vh;
+  height: 8vh;
   background: linear-gradient(to right, lightgray , gray , darkgray );
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   border-radius: 100px;
@@ -39,14 +42,14 @@ header .logo {
 
 header .logo img {
   height: 100%;
-  width: 100px;
+  width: 200px;
 }
 
 header .logo a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 40px;
   
 }
 
@@ -125,80 +128,200 @@ section {
   justify-content: center;
   font-size: 36px;
   font-weight: bold;
+  text-align: center;
 }
 
 section:nth-child(odd) {
   background-color: gray;
+  
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.singkatan {
+  margin-top: 20px;
+  font-size: 25px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: normal;
+}
+
+
+.anggota{
+  padding: 0 40px;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 20px; 
+  align-items: center;
 }
 
 .card {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: space-between; 
+  height: 280px;
+  max-width: 350px;
+  border-radius: 25px;
+  margin: 0 20px;
   background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  text-align: center;
-  margin-top: 100px;
-  color: gray;
+  transition: 0.4s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.card h1{
-  color: gray;
-  font-size: 70%;
-
+.card:hover{
+  height: 480px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-
-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-
-input[type="date"] {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 8px;
+.card .img {
+  height: 200px;
   width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 20px;
+  display: flex;
+
 }
 
-button {
-  background-color: #007bff;
-  border: none;
+.card .img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.card .top-text {
+  padding: 5px;
+  text-align: center;
+}
+
+.card .top-text .name {
+  font-size: 25px;
+  font-weight: 600;
+  color: black;
+
+}
+
+.card .top-text p {
+  font-size: 20px;
+  font-weight: 600;
+  color: purple;
+  line-height: 20px;
+}
+
+.card .bottom-text {
+  padding: 0 20px 10px 20px;
+  margin-top: 5px;
+  background: white;
+  opacity: 0;
+  border-radius: 25px;
+  visibility: hidden;
+  transition: 0.1s;
+  text-align: center;
+}
+
+.card:hover .bottom-text {
+  opacity: 1;
+  visibility: visible;
+  
+}
+
+.card .bottom-text .text {
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+
+.card .bottom-text .btn {
+  margin: 10px 0;
+  
+}
+
+.card .bottom-text .btn a {
+  text-decoration: none;
+  background: purple;
   color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
+  padding: 5px 8px;
+  border-radius: 3px;
+  display: inline-flex;
+  transition: 0.2;
+  border-radius: 25px;
 }
 
-button:hover {
-  background-color: #0056b3;
+.card .bottom-text .btn a:hover {
+  transform: scale(0.9);
+
 }
 
-#currentAge {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: bold;
+.home {
+  height: 100vh;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  padding: 20 10% 0;
+}
+
+.home-content{
+  max-width: 700px;
+  text-align: left; /* Ensures text alignment to the left */
+  margin: 0; /* Remove any centering margin */
+}
+
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+.home-content h3{
+  font-size: 32px;
+  font-weight: 700;
+  color: #00abf0;
+}
+
+.home-content p{
+  font-size: 16px;
+  margin: 20px 0 40px;
+}
+
+.home-content .img {
+  max-width: 10px;
+}
+
+svg{
+  width: 100%;
+  height: 100%;
+  font-family: raleway;
+  
+}
+
+svg text {
+  text-transform: uppercase;
+  font-size: 5rem;
+  animation: stroke 5s infinite alternate;
+  font-size: 200px;
+  align-items: center;
 }
 
 @keyframes stroke {
   0% {
-      stroke: white;
+      stroke: greenyellow;
       stroke-width: 0;
       stroke-dashoffset: 25%;
       stroke-dasharray: 0 50%;
   }
   70% {
-      stroke: white;
+      stroke: greenyellow;
   }
   80% {
-      stroke: white;
+      stroke: greenyellow;
       stroke-width: 3;
   }
   100% {
-      stroke: white;
+      stroke: greenyellow;
       stroke-width: 0;
       stroke-dashoffset: -25%;
       stroke-dasharray:50% 0;
@@ -217,7 +340,13 @@ button:hover {
   }
 }
 
+
+
 @media screen and (max-width: 1024px) {
+  body{
+    margin: 0;
+  }
+  
   header nav,
   header .extra-nav {
     display: none;
@@ -241,6 +370,8 @@ button:hover {
     background-color: #000;
     z-index: 999;
     transition: all 0.2s linear;
+    
+    
   }
 
   header .mobile-nav.show {
@@ -311,6 +442,9 @@ button:hover {
   header .mobile-nav ul li {
     width: 50%;
   }
-  .flip-card{
-    width: 10px;}
+  header{
+    width: 87%;
+    align-items: center;
+    
+  }
 }
