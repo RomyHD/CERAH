@@ -1,0 +1,22 @@
+print("pilih jenis sampah berikut")
+print("1.kertas")
+print("2.tulang ayam")
+print("3.plastik")
+print("4.sedotan plastik")
+print("5.baterai")
+print("6.kaca")
+sampah=(input("masukkan Jenis Sampah= "))
+if sampah=="1":
+  print("sampah organik")
+elif sampah=="2":
+  print("sampah organik")
+elif sampah=="3":
+  print("sampah anorganik")
+elif sampah=="4":
+  print("sampah anorganik")
+elif sampah=="5":
+  print("sampah berbahaya")
+elif sampah=="6":
+  print("sampah berbahaya")
+else:
+  print("Hewan_Tidak_Valid")

@@ -291,6 +291,34 @@ section:nth-child(odd) {
   max-width: 10px;
 }
 
+.canva-embed-card {
+  width: 98vw;
+  max-width: 1090px;
+  background: #fff8eb;
+  border-radius: 28px;
+  box-shadow: 0 4px 34px 0 #dbefff66, 0 1.5px 24px #ffe49b2a;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  transition: box-shadow 0.3s, transform 0.2s;
+  animation: fadeInUp 1s 0.34s both;
+}
+.canva-embed-card:hover {
+  box-shadow: 0 8px 44px 0 #aae9ff88, 0 3px 36px #ffe49b3a;
+  transform: translateY(-2px) scale(1.01);
+}
+.canva-embed-card iframe {
+  width: 100%;
+  min-height: 700px;
+  border: none;
+  display: block;
+  background: #fff;
+}
+.card-shadow {
+  display: none;
+}
+
 svg{
   width: 100%;
   height: 100%;
